@@ -53,6 +53,54 @@
               ],
               "outputHashing": "all"
             },
+            "tenant1": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "src/app/app.module.ts",
+                  "with": "src/app/app.module.tenant1.ts"
+                },{
+                  "replace": "src/app/app-routing.module.ts",
+                  "with": "src/app/app-routing.module.tenant1.ts"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "tenant2": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "src/app/app.module.ts",
+                  "with": "src/app/app.module.tenant2.ts"
+                },{
+                  "replace": "src/app/app-routing.module.ts",
+                  "with": "src/app/app-routing.module.tenant2.ts"
+                }
+              ],
+              "outputHashing": "all"
+            },
             "development": {
               "buildOptimizer": false,
               "optimization": false,
@@ -69,6 +117,12 @@
           "configurations": {
             "production": {
               "browserTarget": "Angular13Crud:build:production"
+            },
+            "tenant1": {
+              "browserTarget": "Angular13Crud:build:tenant1"
+            },
+            "tenant2": {
+              "browserTarget": "Angular13Crud:build:tenant2"
             },
             "development": {
               "browserTarget": "Angular13Crud:build:development"

@@ -5,6 +5,8 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build-tenant1": "ng build --configuration tenant1",
+    "build-tenant2": "ng build --configuration tenant2",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },

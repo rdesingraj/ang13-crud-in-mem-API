@@ -1,0 +1,14 @@
+runtime: nodejs16
+
+instance_class: F2
+
+env_variables: 
+  BUCKET_NAME: "ng-app-bucket"
+
+handlers:
+- url: /
+  static_files: dist/ang13-crud-in-mem-api/index.html
+  upload: dist/ang13-crud-in-mem-api/index.html
+
+- url: /
+  static_dir: dist/ang13-crud-in-mem-api 
